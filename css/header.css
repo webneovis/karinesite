@@ -18,7 +18,7 @@
 .site-header__inner {
     pointer-events: auto;
     width: 100%;
-    max-width: 1210px; /* container 1250 - 2*20 padding */
+    max-width: 1224px; /* container 1250 - 2*20 padding */
     height: 68px;
     padding: 0 22px;
     display: grid;
