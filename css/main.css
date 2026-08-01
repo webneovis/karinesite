@@ -1031,9 +1031,10 @@ a {
     padding-top: 0px;
     padding-bottom: 160px;
     position: relative;
+    background: #fff;
 }
 
-.works::before {
+/*.works::before {
     content: "";
     position: absolute;
     width: 140px;
@@ -1059,7 +1060,7 @@ a {
     left: 10%;
     transform: translateX(-50%);
     z-index: -1;
-}
+}*/
 
 .works_header_container {
     display: flex;
@@ -1081,7 +1082,7 @@ a {
     text-align: center;
 }
 
-.my_works::after {
+/*.my_works::after {
     content: "";
     position: absolute;
     width: 20px;
@@ -1093,7 +1094,7 @@ a {
     left: 44%;
     transform: translateX(-50%);
     z-index: -1;
-}
+}*/
 
 .works__grid {
     display: flex;
@@ -1378,6 +1379,250 @@ a {
     color: #e03ccd;
 }
 
+/* ==================== ВІДГУКИ ==================== */
+.reviews {
+    position: relative;
+    padding-top: 160px;
+    padding-bottom: 160px;
+    background: #fff;
+    overflow: hidden;
+}
+
+.reviews::before {
+    content: "";
+    position: absolute;
+    width: 320px;
+    height: 320px;
+    border-radius: 50%;
+    background: #e03ccd;
+    opacity: 0.12;
+    filter: blur(90px);
+    top: -100px;
+    right: -80px;
+    z-index: 0;
+}
+
+.reviews::after {
+    content: "";
+    position: absolute;
+    width: 240px;
+    height: 240px;
+    border-radius: 50%;
+    background: #62297d;
+    opacity: 0.1;
+    filter: blur(80px);
+    bottom: -60px;
+    left: -60px;
+    z-index: 0;
+}
+
+.reviews .container {
+    position: relative;
+    z-index: 1;
+}
+
+
+/* ==================== СЛАЙДЕР — КАРКАС ==================== */
+.reviews-slider {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin-top: 40px;
+}
+
+.reviews-slider__viewport {
+    flex: 1;
+    overflow: hidden;
+    padding: 20px 20px;      /* ← запас простору зверху й знизу для hover-підйому та тіні */
+    margin: -20px -20px;       /* ← компенсує doданий padding, щоб layout сторінки не зсунувся */
+}
+
+.reviews-slider__track {
+    display: flex;
+    gap: 28px;
+    transition: transform 0.5s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+
+/* ==================== СТРІЛКИ ==================== */
+.reviews-slider__arrow {
+    flex-shrink: 0;
+    width: 48px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1.5px solid #5a1d53;
+    background: #fff;
+    border-radius: 50%;
+    color: #5a1d53;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.reviews-slider__arrow:hover {
+    background: #5a1d53;
+    color: #fff;
+    transform: translateY(-2px);
+}
+
+
+/* ==================== ТОЧКИ-ІНДИКАТОРИ ==================== */
+.reviews-slider__dots {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 32px;
+}
+
+.reviews-slider__dot {
+    width: 9px;
+    height: 9px;
+    border-radius: 50%;
+    background: rgba(90, 29, 83, 0.2);
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    transition: 0.3s ease;
+}
+
+.reviews-slider__dot.is-active {
+    width: 26px;
+    border-radius: 5px;
+    background: linear-gradient(135deg, #2e2e2e 0%, #5a1d53 100%);
+}
+
+
+/* ==================== КАРТКА ВІДГУКУ ==================== */
+.review-card {
+    flex: 0 0 calc(33.333% - 19px);
+    padding: 36px 30px 28px;
+    background: #fdf6fb;
+    border: 1px solid rgba(90, 29, 83, 0.1);
+    border-radius: 24px;
+    box-shadow: 0 8px 18px rgba(90, 29, 83, 0.08);
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.review-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 8px 18px rgba(90, 29, 83, 0.14);
+}
+
+.review-card__quote-icon {
+    font-size: 22px;
+    color: rgba(224, 60, 205, 0.35);
+    margin-bottom: 14px;
+    display: block;
+}
+
+.review-card__stars {
+    display: flex;
+    gap: 4px;
+    margin-bottom: 16px;
+}
+
+.review-card__stars i {
+    font-size: 13px;
+    color: #e03ccd;
+}
+
+.review-card__text {
+    font-size: 15px;
+    line-height: 1.7;
+    color: #4a4a4a;
+    margin-bottom: 24px;
+    min-height: 105px;
+}
+
+.review-card__footer {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    padding-top: 18px;
+    border-top: 1px solid rgba(90, 29, 83, 0.1);
+}
+
+.review-card__avatar {
+    width: 42px;
+    height: 42px;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #5a1d53 0%, #5a1d53 100%);
+    color: #fff;
+    font-weight: 700;
+    font-size: 16px;
+    font-family: "EB Garamond", serif;
+}
+
+.review-card__meta {
+    display: flex;
+    flex-direction: column;
+}
+
+.review-card__name {
+    font-size: 15px;
+    font-weight: 700;
+    color: #2e2e2e;
+}
+
+.review-card__service {
+    font-size: 13px;
+    color: #8a8a8a;
+}
+
+
+/* ==================== CTA ==================== */
+.reviews__cta {
+    text-align: center;
+    margin-top: 60px;
+}
+
+.reviews__cta-text {
+    font-size: 17px;
+    font-weight: 600;
+    color: #62297d;
+    margin-bottom: 16px;
+    font-family: "EB Garamond", serif;
+    font-style: italic;
+}
+
+
+/* ==================== АДАПТИВНІСТЬ ==================== */
+@media (max-width: 1000px) {
+    .review-card {
+        flex: 0 0 calc(50% - 14px);
+    }
+}
+
+@media (max-width: 700px) {
+    .reviews {
+        padding-top: 100px;
+        padding-bottom: 100px;
+    }
+
+    .review-card {
+        flex: 0 0 100%;
+    }
+
+    .review-card__text {
+        min-height: unset;
+    }
+
+    .reviews-slider {
+        gap: 12px;
+    }
+
+    .reviews-slider__arrow {
+        width: 40px;
+        height: 40px;
+        font-size: 14px;
+    }
+}
 
 /* ==================== КОНТАКТИ ==================== */
 .contacts {
