@@ -2208,6 +2208,7 @@ a {
     }
     .intro_subtitle_parameters {
         margin-top: 40px;
+        margin-bottom: 30px;
     }
     .intro_title_header {
         justify-content: center;
@@ -2305,6 +2306,12 @@ a {
 }
 
 @media (max-width: 1000px) {
+    .site-header {
+        padding: 0 20px;
+    }
+    .container {
+        padding: 0 20px;
+    }
     .features__item:last-child {
         margin-bottom: 0px;
     }
@@ -2396,7 +2403,7 @@ a {
 
     .intro_image img {
         width: 100%;
-        margin-top: 10px;
+        margin-top: 16px;
     }
 
     .marquee__text {
@@ -2662,7 +2669,7 @@ a {
     nav {
         position: fixed;
         height: 100vh;
-        height: 100dvh;
+        height: calc(100dvh - 200px);
     }
 
     .lang-switch {
