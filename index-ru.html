@@ -37,14 +37,16 @@
                     <a href="index.html">UK</a>
                     <a href="index-ru.html" class="is-active">RU</a>
                 </div>
-                <button class="site-burger" aria-label="Меню" aria-expanded="false">
+                <button class="site-burger" type="button" aria-label="Menu" aria-expanded="false" aria-controls="siteDrawer">
                     <span></span><span></span><span></span>
                 </button>
             </div>
         </div>
     </header>
 
-    <nav class="site-drawer" aria-label="Mobile navigation">
+    <div class="site-drawer-overlay" hidden></div>
+
+    <nav class="site-drawer" id="siteDrawer" aria-label="Mobile navigation" aria-hidden="true">
     <ul>
         <li><a href="#features">Мой подход</a></li>
         <li><a href="#price">Прайс</a></li>
