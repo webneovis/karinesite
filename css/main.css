@@ -617,6 +617,11 @@ a {
     justify-content: center;
 }
 
+.hr_wr img {
+    width: 19px;
+    height: auto;
+}
+
 .square-outline {
     display: inline-block;
     width: 8px;
@@ -624,10 +629,10 @@ a {
     border: 1.5px solid #5a1d53;
     border-radius: 50%;
     box-sizing: border-box;
-    animation: pulseGlow 2s infinite ease-in-out;
+    /*animation: pulseGlow 2s infinite ease-in-out;*/
 }
 
-@keyframes pulseGlow {
+/*@keyframes pulseGlow {
 
     0%, 100% {
         transform: scale(1);
@@ -641,7 +646,7 @@ a {
             0 0 14px rgba(90, 29, 83, 0.5),
             0 0 24px rgba(90, 29, 83, 0.3);
     }
-}
+}*/
 
 .hr1_usual {
     width: 85px;
