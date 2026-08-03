@@ -43,7 +43,7 @@
 
                     window.setTimeout(function () {
                         header.classList.add('is-visible');
-                    }, 200);
+                    }, 250);
                 });
             });
         });
