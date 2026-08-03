@@ -1079,12 +1079,13 @@ a {
 .my_works {
     margin-top: 160px;
     margin-bottom: 8px;
-    font-size: 35px;
+    font-size: 42px;
     font-weight: 500;
     color: #2e2e2e;
     font-family: "EB Garamond", serif;
     position: relative;
     text-align: center;
+    letter-spacing: 0.02em;
 }
 
 /*.my_works::after {

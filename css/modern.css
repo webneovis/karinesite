@@ -116,7 +116,7 @@ body {
 .intro_subtitle_details { font-size: 18px; letter-spacing: .01em; }
 
 .my_features,
-.section-title { font-size: 42px; letter-spacing: -0.02em; line-height: 1.15; text-align: center; font-family: "EB Garamond", serif; }
+.section-title { font-size: 42px; letter-spacing: 0.02em; line-height: 1.15; text-align: center; font-family: "EB Garamond", serif; }
 .my_features_sub,
 .my_features_sub_price { font-size: 16px; line-height: 1.6; letter-spacing: .005em; text-align: center; font-family: "EB Garamond", serif; }
 
